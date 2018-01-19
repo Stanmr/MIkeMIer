@@ -1,0 +1,119 @@
+/* ==========================================================================
+   Portfolio Item Layout - Standard Shader style - begin
+   ========================================================================== */
+
+.eltdf-portfolio-list-holder {
+	
+	&.eltdf-pl-standard-shader {
+		
+		article {
+
+			margin: 0 0 40px;
+
+			.eltdf-pl-item-inner {
+				width: auto;
+			}
+			
+			.eltdf-pli-image {
+				width: auto;
+				
+				&:after {
+					@include eltdfAbsoluteHolderLayout();
+					content: '';
+					z-index: 1;
+					background-color: rgba($first-main-color, 0.7);
+					opacity: 0;
+					@include eltdfTransition(opacity .2s ease-in-out);
+				}
+				
+				&:before {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					margin: -19px 0 0 -19px;
+					content: '\4c';
+					font-family: 'ElegantIcons', serif;
+					speak: none;
+					color: #fff;
+					font-size: 38px;
+					line-height: 1;
+					font-style: normal;
+					font-weight: normal;
+					font-variant: normal;
+					-webkit-font-smoothing: antialiased;
+					z-index: 2;
+					opacity: 0;
+					@include eltdfTransition(opacity .2s ease-in-out);
+				}
+			}
+			
+			.eltdf-pli-link {
+				z-index: 2;
+			}
+			
+			&:hover {
+				.eltdf-pli-image {
+					&:after,
+					&:before {
+						opacity: 1;
+					}
+				}
+			}
+		}
+		
+		.eltdf-pli-text-holder {
+			display: block;
+			text-align: left;
+			position: relative;
+			width: 100%;
+			vertical-align: middle;
+			margin: 23px 0 0;
+
+			.eltdf-pli-text-wrapper {
+				width: auto;
+			}
+
+			.eltdf-pli-text {
+				.eltdf-pli-title,
+				.eltdf-gli-number-of-images-holder,
+				.eltdf-pli-category-holder {
+					display: inline-block;
+					vertical-align: middle;
+				}
+
+				.eltdf-pli-title {
+					text-transform: uppercase;
+					margin-right:6px;
+				}
+
+				.eltdf-gli-number-of-images-holder,
+				.eltdf-pli-category-holder {
+					font-size: 12px;
+				}
+
+				.eltdf-gli-number-of-images-holder {
+					text-transform: uppercase;
+					line-height: 1em;
+					letter-spacing: .2em;
+
+					&:before {
+						content: "/";
+						vertical-align: middle;
+					}
+				}
+
+				.eltdf-pli-category-holder {
+					margin-top: 0;
+					a {
+						color: #737373;
+						text-transform: uppercase;
+						letter-spacing: .2em;
+					}
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio Item Layout - Standard Shader style - end
+   ========================================================================== */

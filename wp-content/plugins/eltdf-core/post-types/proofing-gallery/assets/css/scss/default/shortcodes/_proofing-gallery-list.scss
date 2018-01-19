@@ -1,0 +1,426 @@
+/* ==========================================================================
+   Proofing Gallery shortcode style - begin
+   ========================================================================== */
+
+.eltdf-proofing-gallery-list-holder {
+
+	@include eltdfRelativeHolderLayout();
+
+	/***** Article Global Style - begin *****/
+
+    article {
+	    @include eltdfRelativeHolderLayout();
+        box-sizing: border-box;
+
+	    .touch & {
+		    cursor: pointer;
+	    }
+
+	    .eltdf-pgl-item-inner {
+		    @include eltdfRelativeHolderLayout();
+		    overflow: hidden;
+	    }
+	    
+	    .eltdf-pgli-image {
+		    @include eltdfRelativeHolderLayout();
+		    
+		    img {
+			   vertical-align: middle;
+		    }
+	    }
+
+	    .eltdf-pgli-link {
+		    @include eltdfAbsoluteHolderLayout();
+	    }
+
+	    .eltdf-pgli-text-wrapper {
+	        @include eltdfTableLayout();
+	    }
+
+	    .eltdf-pgli-text {
+		    position: relative;
+		    display: table-cell;
+		    height: 100%;
+		    width: 100%;
+		    vertical-align: middle;
+
+		    .eltdf-pgli-title {
+				margin: 0;
+				padding: 13px 0 0;
+		    }
+
+		    .eltdf-pgli-number-of-images-holder {
+			    font-weight: 400;
+				line-height: 19px;
+		    }
+
+
+	    }
+    }
+
+	/***** Article Global Style - end *****/
+	
+	/***** Proofing Gallery Columns Space - begin *****/
+	
+	$columns_space_label: ('no', 'tiny', 'small', 'normal');
+	$columns_space: (0, 5, 10, 15);
+	
+	@for $i from 0 to length($columns_space_label) {
+		&.eltdf-pgl-#{nth($columns_space_label,$i+1)}-space {
+			$item_space: nth($columns_space, $i+1);
+			$item_bottom_margin: $item_space * 2;
+			
+			.eltdf-pgl-inner {
+				margin: 0 -#{$item_space}px;
+			}
+			
+			article {
+				padding: 0 #{$item_space}px;
+				margin: 0 0 #{$item_bottom_margin}px;
+			}
+		}
+	}
+	
+	/***** Proofing Gallery Columns Space - end *****/
+	
+	/***** Proofing Gallery Types - begin *****/
+	
+	&.eltdf-pgl-gallery {
+		
+		&:not(.eltdf-pgl-one-column) {
+			
+			article {
+				float: left;
+			}
+		}
+		
+		$gallery_columns_number: ('two', 'three', 'four', 'five');
+		
+		@for $i from 0 to length($gallery_columns_number) {
+			&.eltdf-pgl-#{nth($gallery_columns_number,$i+1)}-columns {
+				
+				article {
+					width: 100% / ($i+2);
+				}
+				
+				@if ($i > 1) { // set different break point for four and five columns
+					@media only screen and (min-width: $laptop-landscape-plus-pixel) {
+						
+						article {
+							
+							&:nth-child(#{$i+2}n+1) {
+								clear: both;
+							}
+						}
+					}
+				} @else {
+					@media only screen and (min-width: $ipad-landscape-plus-pixel) {
+						
+						article {
+							
+							&:nth-child(#{$i+2}n+1) {
+								clear: both;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+
+	/***** Proofing Gallery Types - end *****/
+
+	/***** Additional Features - begin *****/
+
+	&.eltdf-pgl-has-animation {
+
+		article {
+			opacity: 0;
+			@include eltdfTransform(translateY(80px));
+			@include eltdfTransition(opacity .8s cubic-bezier(0.34, 0.52, 0.57, 1.04), transform .8s cubic-bezier(0.34, 0.52, 0.57, 1.04));
+
+			&.eltdf-item-show {
+				opacity: 1;
+				@include eltdfTransform(translateY(0));
+
+				&.eltdf-item-shown {
+					@include eltdfTransition(none);
+				}
+			}
+			
+			.touch & {
+				opacity: 1;
+				@include eltdfTransform(translateY(0));
+			}
+		}
+	}
+
+	/***** Additional Features - end *****/
+}
+
+/* ==========================================================================
+   Proofing Gallery shortcode style - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Proofing Gallery filter style - begin
+   ========================================================================== */
+
+.eltdf-pgl-filter-holder {
+    @include eltdfRelativeHolderLayout();
+    margin: 0 0 36px;
+
+    ul {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 15px 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            cursor: pointer;
+	        
+	        @include laptop-landscape-large {
+		        padding: 0 16px;
+	        }
+	
+	        @include ipad-landscape {
+		        padding: 0 10px;
+	        }
+
+            span {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                padding: 0 15px;
+                color: #a6a6a6;
+				letter-spacing: 1px;
+				text-transform: uppercase;
+                @include eltdfTransition(color .2s ease-out);
+            }
+            &:first-child span{
+				padding-left: 0
+			}
+
+            &.eltdf-pgl-current,
+            &:hover {
+
+                span {
+                    color: $first-main-color;
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Proofing Gallery filter style - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Proofing Gallery standard pagination style - begin
+   ========================================================================== */
+
+.eltdf-proofing-gallery-list-holder {
+	
+	&.eltdf-pgl-pag-standard {
+		
+		.eltdf-pgl-inner {
+			opacity: 1;
+			@include eltdfTransition(opacity .2s ease-out);
+		}
+		
+		&.eltdf-pgl-pag-standard-animate {
+			
+			.eltdf-pgl-inner {
+				opacity: 0;
+			}
+		}
+	}
+}
+
+.eltdf-pgl-standard-pagination {
+	@include eltdfRelativeHolderLayout();
+	margin: 20px 0 0;
+	clear: both;
+	
+	ul {
+		@include eltdfRelativeHolderLayout();
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		text-align: center;
+		
+		li {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			margin: 0 12px;
+			padding: 0;
+			
+			a {
+				position: relative;
+				display: inline-block;
+				vertical-align: middle;
+				margin: 0;
+				padding: 0;
+			}
+			
+			&.eltdf-pgl-pag-active {
+				
+				a {
+					color: $first-main-color;
+				}
+			}
+			
+			&.eltdf-pgl-pag-prev,
+			&.eltdf-pgl-pag-next {
+				position: absolute;
+				top: 0;
+				
+				a {
+					font-size: 30px;
+					@include eltdfTransition(color .2s ease-out, opacity .2s ease-out);
+					
+					span {
+						display: block;
+						line-height: inherit;
+						
+						&:before {
+							display: block;
+							line-height: inherit;
+						}
+					}
+				}
+			}
+			
+			&.eltdf-pgl-pag-prev {
+				left: 0;
+				
+				a {
+					opacity: 0;
+				}
+			}
+			
+			&.eltdf-pgl-pag-next {
+				right: 0;
+				
+				a {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Proofing Gallery standard pagination style - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Proofing Gallery load more pagination style - begin
+   ========================================================================== */
+
+.eltdf-pgl-load-more-holder {
+	@include eltdfRelativeHolderLayout();
+
+    .eltdf-pgl-load-more {
+	    margin: 40px 0 0;
+	    text-align: center;
+    }
+}
+/* ==========================================================================
+   Proofing Gallery load more pagination style - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Proofing Gallery loading element style - begin
+   ========================================================================== */
+
+.eltdf-pgl-loading {
+	position: relative;
+	display: none;
+	width: 100%;
+	margin: 40px 0 20px;
+	color: $default-heading-color;
+	text-align: center;
+
+	&.eltdf-filter-trigger {
+		position: absolute;
+		top: 250px;
+		left: 0;
+	}
+	
+    &.eltdf-standard-pag-trigger {
+		position: absolute;
+		top: 50px;
+		left: 0;
+	
+	    .eltdf-pgl-has-filter & {
+		    top: 150px;
+	    }
+    }
+
+	&.eltdf-showing {
+		display: block;
+	}
+
+	> div {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		width: 14px;
+		height: 14px;
+		margin: 0 3px;
+		background-color: $default-heading-color;
+		border-radius: 100%;
+		@include eltdfAnimation(sk-bouncedelay 1.4s infinite ease-in-out both);
+	}
+
+	.eltdf-pgl-loading-bounce1 {
+		-webkit-animation-delay: -0.32s;
+		-moz-animation-delay: -0.32s;
+		animation-delay: -0.32s;
+	}
+
+	.eltdf-pgl-loading-bounce2 {
+		-webkit-animation-delay: -0.16s;
+		-moz-animation-delay: -0.16s;
+		animation-delay: -0.16s;
+	}
+}
+
+@-webkit-keyframes sk-bouncedelay {
+	0%, 80%, 100% {
+		-webkit-transform: scale(0);
+	}
+	40% {
+		-webkit-transform: scale(1.0);
+	}
+}
+
+@-moz-keyframes sk-bouncedelay {
+	0%, 80%, 100% {
+		-moz-transform: scale(0);
+	}
+	40% {
+		-moz-transform: scale(1.0);
+	}
+}
+
+@keyframes sk-bouncedelay {
+	0%, 80%, 100% {
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	}
+	40% {
+		-webkit-transform: scale(1.0);
+		transform: scale(1.0);
+	}
+}
+/* ==========================================================================
+   Proofing Gallery loading element style - end
+   ========================================================================== */

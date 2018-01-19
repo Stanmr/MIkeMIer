@@ -1,0 +1,124 @@
+/* ==========================================================================
+   Portfolio Item Layout - Gallery Overlay style - begin
+   ========================================================================== */
+
+.eltdf-portfolio-list-holder {
+	
+	&.eltdf-pl-gallery-overlay {
+		
+		article {
+			.eltdf-pli-text {
+				position: absolute;
+				top: 40px;
+				left: 40px;
+				display: block;
+				width: auto;
+				height: auto;
+				text-align: left;
+				overflow: hidden;
+				
+				.eltdf-pli-title,
+				.eltdf-pli-excerpt,
+				.eltdf-gli-number-of-images-holder{
+					color: #fff;
+				}
+
+				.eltdf-pli-info-holder {
+					position: relative;
+					z-index: 1;
+					text-transform: uppercase;
+					@include eltdfTransform(translateY(100%));
+					@include eltdfTransition(transform .4s cubic-bezier(0.22, 0.61, 0.36, 1));
+					div {
+						display: inline-block;
+					}
+				}
+
+				.eltdf-pli-title {
+					text-transform: uppercase;
+					margin-bottom: 0;
+					@include eltdfTransform(translateY(-100%));
+					@include eltdfTransition(transform .4s cubic-bezier(0.22, 0.61, 0.36, 1));
+				}
+
+				.eltdf-gli-number-of-images-holder {
+					text-align: left;
+					font-size: 12px;
+				}
+
+				.eltdf-portfolio-like {
+					.eltdf-like {
+						&:before {
+							content: "/";
+							display: inline-block;
+							padding: 0 12px 0 8px;
+						}
+					}
+				}
+				
+				.eltdf-pli-category-holder {
+					font-size: 12px;
+					a {
+						color: #fff;
+					}
+				}
+			}
+			
+			&:hover {
+				.eltdf-pli-text-holder {
+					opacity: 1;
+				}
+				.eltdf-pli-info-holder,
+				.eltdf-pli-title {
+					@include eltdfTransform(translateY(0));
+				}
+			}
+		}
+		
+		.eltdf-pli-text-holder {
+			position: absolute;
+			display: block;
+			width: 100%;
+			top: 0;
+			left: 0;
+			height: 100%;
+			background-color: rgba($first-main-color, 0.9);
+			opacity: 0;
+			text-align: center;
+			@include eltdfTransition(opacity .3s ease);
+			box-sizing: border-box;
+		}
+
+		&.eltdf-pl-has-animation {
+			article {
+				.eltdf-pl-item-inner {
+					opacity: 0;
+					-webkit-transform: scale(0.8);
+					-moz-transform: scale(0.8);
+					transform: scale(0.8);
+					webkit-transition: opacity 0.8s cubic-bezier(0.22, 0.61, 0.36, 1), -webkit-transform 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+					transition: opacity 0.8s cubic-bezier(0.22, 0.61, 0.36, 1), transform 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+				}
+
+				&.eltdf-appeared {
+					.eltdf-pl-item-inner {
+						opacity: 1;
+						-webkit-transform: scale(1);
+						-moz-transform: scale(1);
+						transform: scale(1);
+					}
+				}
+
+				.touch & {
+					opacity: 1;
+					-webkit-transform: scale(1);
+					-moz-transform: scale(1);
+					transform: scale(1);
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio Item Layout - Gallery Overlay style - end
+   ========================================================================== */

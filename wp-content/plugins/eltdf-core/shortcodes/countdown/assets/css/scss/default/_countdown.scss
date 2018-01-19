@@ -1,0 +1,103 @@
+/* ==========================================================================
+   Countdown shortcode style - begin
+   ========================================================================== */
+
+.eltdf-countdown {
+	@include eltdfRelativeHolderLayout();
+	
+	.countdown-rtl {
+		direction: rtl;
+	}
+	
+	.countdown-row {
+		@include eltdfRelativeHolderLayout();
+		text-align: center;
+		clear: both;
+		
+		&.countdown-show1 .countdown-section {
+			width: 100%;
+		}
+		&.countdown-show2 .countdown-section {
+			width: 50%;
+		}
+		&.countdown-show3 .countdown-section {
+			width: 33.33333333333333%;
+		}
+		&.countdown-show4 .countdown-section {
+			width: 25%;
+		}
+		&.countdown-show5 .countdown-section {
+			width: 20%;
+		}
+		
+		.countdown-section {
+			@include eltdfRelativeHolderLayout();
+			padding: 0 5px;
+			box-sizing: border-box;
+			
+			.countdown-amount {
+				position: relative;
+				display: block;
+				color: $default-heading-color;
+				font-size: 72px;
+				line-height: 1em;
+				font-weight: 400;
+				padding-bottom: 22px;
+				margin-bottom: 26px;
+				&:after {
+					content: "";
+					position: absolute;
+					top: 100%;
+					left: 50%;
+					transform: translateX(-50%);
+					width: 54px;
+					display: inline-block;
+					height: 2px;
+					background-color:$first-main-color;
+					text-align: center;
+
+				}
+			}
+			
+			.countdown-period {
+				display: block;
+				font-size: 21px;
+				font-weight: 500;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+				color: #212121;
+			}
+		}
+	}
+	
+	&.eltdf-dark-skin {
+		
+		.countdown-row {
+			
+			.countdown-section {
+				
+				.countdown-amount,
+				.countdown-period {
+					color: $default-heading-color;
+				}
+			}
+		}
+	}
+	
+	&.eltdf-light-skin {
+		
+		.countdown-row {
+			
+			.countdown-section {
+				
+				.countdown-amount,
+				.countdown-period {
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Countdown shortcode style - end
+   ========================================================================== */

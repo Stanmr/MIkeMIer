@@ -1,0 +1,8 @@
+1.1
+- Added Woocommerce 3+ compatibility
+- Updated Visual Composer to 5.4.2
+- Updated Revolution Slider to 5.4.6
+- Updated Elated CPT plugin
+- Fixed bug with countdown not accepting year 2017
+- Fixed bug with pagination on portfolio lists
+- Fixed potential security issue when saving theme options

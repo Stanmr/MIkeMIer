@@ -1,0 +1,465 @@
+/* ==========================================================================
+   Proofing Gallery Single page style - begin
+   ========================================================================== */
+
+.eltdf-proofing-gallery-single-holder {
+	@include eltdfRelativeHolderLayout();
+
+	.eltdf-pgs-gallery-holder {
+		@include eltdfRelativeHolderLayout();
+		padding: 35px 0 60px;
+
+		.eltdf-pgs-gallery-image {
+			@include eltdfRelativeHolderLayout();
+			box-sizing: border-box;
+			float: left;
+
+			.eltdf-pgs-gallery-image-inner {
+				box-sizing: border-box;
+
+			}
+
+			img {
+				vertical-align: middle;
+			}
+
+			.eltdf-pgs-gallery-image-info {
+
+				padding: 16px 54px;
+				box-sizing: border-box;
+				position: relative;
+				text-align: center;
+				background-color: #f7f5f5;
+
+				.eltdf-pgs-gallery-image-info-pretty-photo {
+					position: absolute;
+					left: 0;
+					width: 54px;
+					text-align: center;
+					top: 50%;
+					@include eltdfTransform(translateY(-50%));
+					color: $default-text-color;
+					font-size: 16px;
+				}
+
+				.eltdf-pgs-image-action-icon {
+					position: absolute;
+					right: 0;
+					width: 54px;
+					text-align: center;
+					top: 50%;
+					@include eltdfTransform(translateY(-50%));
+					cursor: pointer;
+
+					@include keyframes(eltdf-blink) {
+						0%,100% {
+							opacity: 1;
+						}
+
+						50% {
+							opacity: 0;
+						}
+					}
+
+					&.eltdf-blink {
+						@include eltdfAnimation(eltdf-blink 1s infinite ease);
+					}
+				}
+				.eltdf-pgs-gallery-image-id {
+					font-weight: 400;
+				}
+
+			}
+
+			.eltdf-pgs-reject-icon {
+				display: none;
+			}
+
+			&.proofing-gallery-image-approved {
+				.eltdf-pgs-gallery-image-info {
+					background-color: $default-heading-color;
+
+					.eltdf-pgs-gallery-image-id {
+						color: #fff;
+					}
+
+				}
+
+				.eltdf-pgs-reject-icon {
+					display: inline-block;
+					color: #ffffff;
+				}
+				.eltdf-pgs-approve-icon {
+					display: none;
+				}
+
+				.eltdf-pgs-gallery-image-info-pretty-photo {
+					color: #ffffff;
+				}
+
+			}
+		}
+	}
+
+	.eltdf-pgs-meta-holder {
+		text-align: center;
+
+		.eltdf-pgs-meta-inner {
+			display: inline-block;
+			vertical-align: middle;
+
+			> div {
+				float: left;
+				padding: 0 7px;
+				font-size: 12px;
+				font-weight: 500;
+				text-transform: uppercase;
+				letter-spacing: .2em;
+			}
+		}
+	}
+
+
+	&.eltdf-proofing-gallery-light {
+
+		.eltdf-pgs-gallery-holder {
+
+			.eltdf-pgs-gallery-image {
+
+				.eltdf-pgs-gallery-image-inner {
+					border: 1px solid #8b8b8b;
+
+				}
+
+
+				.eltdf-pgs-gallery-image-info {
+
+					border-top: 1px solid #8b8b8b;
+
+						.eltdf-pgs-gallery-image-id {
+							color: #fff;
+						}
+
+				}
+
+				&.proofing-gallery-image-approved {
+					.eltdf-pgs-gallery-image-inner {
+						border: 2px solid #fff;
+
+					}
+					.eltdf-pgs-gallery-image-info {
+						border-top: 1px solid #fff;
+						background-color: #fff;
+
+						.eltdf-pgs-gallery-image-id {
+							color: $first-main-color;
+						}
+
+					}
+
+				}
+			}
+		}
+
+		.eltdf-pgs-meta-holder {
+
+			.eltdf-pgs-meta-inner {
+				> div {
+					span {
+						color: #fff;
+					}
+				}
+			}
+		}
+
+
+		.eltdf-pgs-gallery-filter-holder {
+
+			.eltdf-pgs-gallery-filter-inner {
+
+				li {
+					&.eltdf-pgs-filter-current {
+						color: #fff;
+					}
+				}
+			}
+		}
+
+	}
+
+}
+
+/* ==========================================================================
+   Proofing Gallery Single page style - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Proofing Gallery Single page specific style for types - begin
+   ========================================================================== */
+
+.eltdf-proofing-gallery-single-holder {
+
+	.eltdf-pgs-gallery-holder {
+
+		&.eltdf-pgs-gallery-masonry {
+
+			.eltdf-pgs-gallery-image,
+			.eltdf-pgs-grid-sizer {
+				width: 25%;
+			}
+
+			.eltdf-pgs-grid-gutter {
+				width: 0;
+			}
+
+			/***** Columns Layout - begin *****/
+
+			$columns_number: ('two', 'three', 'four');
+
+			@for $i from 0 to length($columns_number) {
+				&.eltdf-pgs-gallery-#{nth($columns_number,$i+1)}-columns {
+					$column_width: 100%/($i+2);
+
+					.eltdf-pgs-gallery-image,
+					.eltdf-pgs-grid-sizer {
+						width: $column_width;
+					}
+
+				}
+			}
+
+			/***** Columns Layout - end *****/
+
+			/***** Space Between Columns Space - begin *****/
+
+			$columns_space_label: ('no', 'tiny', 'small', 'normal');
+			$columns_space: (0, 5, 10, 15);
+
+			@for $i from 0 to length($columns_space_label) {
+				&.eltdf-pgs-gallery-#{nth($columns_space_label,$i+1)}-space {
+					$item_space: nth($columns_space, $i+1);
+					$item_bottom_margin: $item_space * 2;
+
+					@if($item_space == 0) {
+						.eltdf-ps-image-inner {
+							margin: 0;
+						}
+					} @else {
+						.eltdf-pgs-gallery-inner {
+							margin: 0 -#{$item_space}px;
+						}
+					}
+
+					.eltdf-pgs-gallery-image {
+						padding: 0 #{$item_space}px;
+						margin: 0 0 #{$item_bottom_margin}px;
+					}
+				}
+			}
+
+			/***** Space Between Columns Space - end *****/
+		}
+	}
+}
+/* ==========================================================================
+   Proofing Gallery Single page specific style for types - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Proofing Gallery filter style - begin
+   ========================================================================== */
+
+.eltdf-pgs-gallery-filter-holder {
+	position: relative;
+	width: 100%;
+	vertical-align: middle;
+	text-align: center;
+	padding: 50px 0;
+
+	.eltdf-pgs-gallery-filter-inner {
+		display: inline-block;
+		vertical-align: middle;
+
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+
+		li {
+			display: inline-block;
+			vertical-align: middle;
+			margin: 0 15px;
+			cursor: pointer;
+			font-weight: 500;
+			text-transform: uppercase;
+			letter-spacing: 0.12em;
+			color: $default-heading-color;
+
+			&.eltdf-pgs-filter-current {
+				position: relative;
+
+				span {
+					&:after {
+						display:block;
+						content: "";
+						position: absolute;
+						width: 100%;
+						height: 2px;
+						background-color: $first-main-color;
+					}
+				}
+			}
+		}
+	}
+
+	.eltdf-pgs-gallery-download-holder {
+		position: absolute;
+		top: 50%;
+		@include eltdfTransform(translateY(-50%));
+		right: 0;
+		left: auto;
+		.eltdf-btn-dark:hover {
+			background-color: $first-main-color;
+			border: 1px solid $first-main-color;
+			color: #fff;
+		}
+	}
+}
+/* ==========================================================================
+   Proofing Gallery single fitler style - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Proofing Gallery single password protected style - start
+   ========================================================================== */
+
+.eltdf-content .eltdf-content-inner > .eltdf-full-width.eltdf-pgs-full-width-no-padding > .eltdf-full-width-inner {
+	padding: 0 !important;
+}
+
+.eltdf-password-protected-holder {
+	text-align: center;
+	width: 100%;
+	display: table;
+	table-layout: fixed;
+	background-size: cover;
+
+
+	.eltdf-password-protected-holder-inner {
+		display: table-cell;
+		vertical-align: middle;
+		padding: 50px 10px;
+		box-sizing: border-box;
+	}
+
+	.eltdf-password-protected-title {
+		font-weight: 400;
+	}
+
+	.eltdf-password-protected-subtitle {
+		margin-top: 2px;
+		text-transform: uppercase;
+	}
+
+
+
+	.eltdf-password-protected-fields {
+		border: 1px solid #4a4c52;
+		padding: 0 55px;
+		text-align: center;
+		position: relative;
+		width: 330px;
+		max-width: 100%;
+		box-sizing: border-box;
+		display: inline-block;
+		margin: 43px 0 0 0;
+	}
+
+	input[type='password']{
+		background-color: transparent;
+		border: none;
+		text-align: center;
+		padding: 14px 0;
+		outline: none;
+		font-family: Poppins, serif;
+		font-size: 11px;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		color: #64686e;
+		width: 100%;
+	}
+
+	::-webkit-input-placeholder{
+		color: #64686e;
+		opacity: 1;
+	}
+
+	:-moz-placeholder {
+		color: #64686e;
+		opacity: 1;
+	}
+	::-moz-placeholder {
+		color: #64686e;
+		opacity: 1;
+	}
+	:-ms-input-placeholder{
+		color: #64686e;
+		opacity: 1;
+	}
+
+	input[type='submit']{
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 100%;
+		width: 50px;
+		font-family: "ElegantIcons", serif;
+		font-size: 21px;
+		background-color: transparent;
+		border: none;
+		padding: 0;
+		cursor: pointer;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	&.eltdf-password-protected-light{
+
+		.eltdf-password-protected-title,
+		.eltdf-password-protected-subtitle {
+			color: #fff;
+		}
+		input[type='submit'],
+		input[type='password']{
+			color: #fff;
+	}
+		.eltdf-password-protected-fields {
+			border-color: rgba(255,255,255,0.7);
+		}
+		::-webkit-input-placeholder{
+			color: #ffffff;
+			opacity: 1;
+		}
+
+		:-moz-placeholder {
+			color: #ffffff;
+			opacity: 1;
+		}
+		::-moz-placeholder {
+			color: #ffffff;
+			opacity: 1;
+		}
+		:-ms-input-placeholder{
+			color: #ffffff;
+			opacity: 1;
+		}
+	}
+
+}
+
+
+/* ==========================================================================
+   Proofing Gallery single password protected style - end
+   ========================================================================== */

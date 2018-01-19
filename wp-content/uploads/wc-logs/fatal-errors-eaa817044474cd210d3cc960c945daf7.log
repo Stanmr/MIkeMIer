@@ -1,0 +1,80 @@
+2018-01-08T20:43:15+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 19648 bytes)
+
+2018-01-08T20:45:48+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 29440 bytes)
+
+2018-01-08T20:46:20+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 19648 bytes)
+
+2018-01-08T20:46:49+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 19648 bytes)
+
+2018-01-08T20:47:18+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 29440 bytes)
+
+2018-01-08T20:48:14+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 33108 bytes)
+
+2018-01-08T20:50:02+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 34240 bytes)
+
+2018-01-08T20:50:07+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 19648 bytes)
+
+2018-01-08T20:52:00+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 29440 bytes)
+
+2018-01-08T20:53:35+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 29440 bytes)
+
+2018-01-08T20:57:20+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 35128 bytes)
+
+2018-01-08T20:57:45+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 19648 bytes)
+
+2018-01-08T20:57:50+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 29440 bytes)
+
+2018-01-08T20:58:03+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 19648 bytes)
+
+2018-01-08T21:01:23+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 19648 bytes)
+
+2018-01-08T21:01:48+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 19648 bytes)
+
+2018-01-08T21:01:56+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 29440 bytes)
+
+2018-01-08T21:02:19+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 19648 bytes)
+
+2018-01-08T21:02:35+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 19648 bytes)
+
+2018-01-08T21:03:29+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 19648 bytes)
+
+2018-01-08T21:03:37+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 29440 bytes)
+
+2018-01-08T21:06:08+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 29440 bytes)
+
+2018-01-08T21:07:37+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 19648 bytes)
+
+2018-01-08T21:08:43+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 19648 bytes)
+
+2018-01-08T21:09:38+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 19452 bytes)
+
+2018-01-08T21:11:08+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 19648 bytes)
+
+2018-01-08T21:11:15+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 19648 bytes)
+
+2018-01-08T21:12:33+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 19648 bytes)
+
+2018-01-08T21:12:40+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 19648 bytes)
+
+2018-01-08T21:12:59+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 29440 bytes)
+
+2018-01-08T21:14:26+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 19648 bytes)
+
+2018-01-08T21:14:53+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 19648 bytes)
+
+2018-01-08T21:15:11+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 67452 bytes)
+
+2018-01-08T21:16:05+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 29440 bytes)
+
+2018-01-08T21:38:09+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 19648 bytes)
+
+2018-01-08T21:40:12+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 19648 bytes)
+
+2018-01-08T21:42:48+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 29440 bytes)
+
+2018-01-08T21:44:42+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 19648 bytes)
+
+2018-01-08T21:47:47+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 19648 bytes)
+
+2018-01-13T05:46:48+00:00 CRITICAL Maximum execution time of 600 seconds exceeded
+

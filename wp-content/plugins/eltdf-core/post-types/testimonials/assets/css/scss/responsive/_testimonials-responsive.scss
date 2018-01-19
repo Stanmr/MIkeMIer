@@ -1,0 +1,31 @@
+@include ipad-landscape {
+    .eltdf-testimonials-holder {
+
+        &.eltdf-testimonials-standard {
+            .eltdf-testimonial-text {
+                padding: 0 10%;
+            }
+        }
+    }
+}
+@include ipad-portrait {
+    .eltdf-testimonials-holder {
+
+        &.eltdf-testimonials-standard {
+            .eltdf-testimonial-text {
+                padding: 0 8%;
+            }
+        }
+    }
+}
+
+@include phone-portrait {
+    .eltdf-testimonials-holder {
+        .eltdf-testimonials {
+            padding: 0 20px;
+            .eltdf-testimonial-title {
+                font-size: 20px;
+            }
+        }
+    }
+}

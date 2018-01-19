@@ -1,0 +1,12 @@
+@include ipad-landscape {
+	.eltdf-full-screen-sections .eltdf-fss-item.fp-completely:not(.active),
+	.eltdf-full-screen-sections .eltdf-fss-item.active{
+		transform: none;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+	.eltdf-full-screen-sections {
+		margin-top: -50px;
+	}
+}

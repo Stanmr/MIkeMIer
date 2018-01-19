@@ -1,0 +1,1 @@
+<?php do_action('azalea_eltdf_get_footer_template');

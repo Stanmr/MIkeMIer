@@ -1,0 +1,536 @@
+/* ==========================================================================
+   Portfolio shortcode style - begin
+   ========================================================================== */
+
+.eltdf-portfolio-list-holder {
+    @include eltdfRelativeHolderLayout();
+
+	/***** Article Global Style - begin *****/
+
+    article {
+	    @include eltdfRelativeHolderLayout();
+        box-sizing: border-box;
+
+	    .touch & {
+		    cursor: pointer;
+	    }
+
+	    .eltdf-pl-item-inner {
+		    @include eltdfRelativeHolderLayout();
+		    overflow: hidden;
+	    }
+	    
+	    .eltdf-pli-image {
+		    @include eltdfRelativeHolderLayout();
+		    
+		    img {
+			    display: block;
+			    width: 100%;
+		    }
+	    }
+
+	    .eltdf-pli-link {
+		    @include eltdfAbsoluteHolderLayout();
+	    }
+
+	    .eltdf-pli-text-wrapper {
+	        @include eltdfTableLayout();
+	    }
+
+	    .eltdf-pli-text {
+		    @include eltdfTableCellLayout();
+
+		    .eltdf-pli-title {
+				margin: 0 0 3px;
+		    }
+
+			.eltdf-portfolio-like {
+				display: inline-block;
+				.eltdf-like {
+					position: relative;
+					color: #ffffff;
+					font-size: 12px;
+					z-index: 8;
+					span {
+						font-weight: 500;
+						margin-left: 7px;
+					}
+				}
+			}
+
+		    .eltdf-pli-category-holder {
+			    position: relative;
+			    display: inline-block;
+
+			    a {
+				    position: relative;
+					text-transform: uppercase;
+				    display: inline-block;
+				    padding: 0 6px 0 0;
+				    margin: 0 3px 0 0;
+				    z-index: 8;
+				    
+				    &:after {
+					    position: absolute;
+					    top: 0;
+					    right: -4px;
+					    content: '/';
+					    color: inherit;
+					    font-size: 12px;
+					    line-height: inherit;
+				    }
+
+				    &:last-child {
+					    margin: 0;
+					    padding: 0;
+					    
+					    &:after {
+						    display: none;
+					    }
+				    }
+			    }
+		    }
+
+		    .eltdf-pli-excerpt {
+			    margin: 3px 0 0;
+		    }
+	    }
+    }
+
+	/***** Article Global Style - end *****/
+	
+	/***** Specific Global Style - begin *****/
+	
+	&.eltdf-pl-has-filter {
+		
+		article {
+			
+			.eltdf-pl-inner {
+				overflow: hidden;
+			}
+		}
+	}
+	
+	&.eltdf-pl-no-content {
+		
+		.eltdf-pli-text-holder {
+			display: none;
+		}
+	}
+	/***** Specific Global Style - end *****/
+	
+	/***** Portfolio Columns Space - begin *****/
+	
+	$columns_space_label: ('no', 'tiny', 'small', 'normal');
+	$columns_space: (0, 4, 13, 25);
+	
+	@for $i from 0 to length($columns_space_label) {
+		&.eltdf-pl-#{nth($columns_space_label,$i+1)}-space {
+			$item_space: nth($columns_space, $i+1);
+			$item_bottom_margin: $item_space * 2;
+			
+			.eltdf-pl-inner {
+				@if($item_space == 0) {
+					margin: 0;
+				} @else {
+					margin: 0 -#{$item_space}px;
+				}
+			}
+			
+			article {
+				padding: 0 #{$item_space}px;
+				margin: 0 0 #{$item_bottom_margin}px;
+			}
+		}
+	}
+	
+	/***** Portfolio Columns Space - end *****/
+	
+	/***** Portfolio Types - begin *****/
+	
+	&.eltdf-pl-gallery {
+		
+		&:not(.eltdf-pl-one-column) {
+			
+			article {
+				float: left;
+			}
+		}
+		
+		$gallery_columns_number: ('two', 'three', 'four', 'five');
+		
+		@for $i from 0 to length($gallery_columns_number) {
+			&.eltdf-pl-#{nth($gallery_columns_number,$i+1)}-columns {
+				
+				article {
+					width: 100% / ($i+2);
+				}
+				
+				@if ($i > 1) { // set different break point for four and five columns
+					@media only screen and (min-width: $laptop-landscape-plus-pixel) {
+						
+						article {
+							
+							&:nth-child(#{$i+2}n+1) {
+								clear: both;
+							}
+						}
+					}
+				} @else {
+					@media only screen and (min-width: $ipad-landscape-plus-pixel) {
+						
+						article {
+							
+							&:nth-child(#{$i+2}n+1) {
+								clear: both;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	&.eltdf-pl-masonry {
+		
+		.eltdf-pl-inner {
+			opacity: 0;
+		}
+		
+		article,
+		.eltdf-pl-grid-sizer {
+			width: 100%;
+		}
+		
+		.eltdf-pl-grid-gutter {
+			width: 0;
+		}
+		
+		$masonry_columns_number: ('two', 'three', 'four', 'five');
+		
+		@for $i from 0 to length($masonry_columns_number) {
+			&.eltdf-pl-#{nth($masonry_columns_number,$i+1)}-columns {
+				$column_width: 100%/($i+2);
+				
+				article,
+				.eltdf-pl-grid-sizer {
+					width: $column_width;
+				}
+				
+				article {
+					
+					&.eltdf-pl-masonry-large-width,
+                    &.eltdf-pl-masonry-large-width-height {
+						width: $column_width * 2;
+					}
+				}
+			}
+		}
+
+        &.eltdf-pl-images-fixed {
+	        
+            article {
+	            
+                .eltdf-pl-item-inner {
+                    height: 100%;
+                }
+	
+	            .eltdf-pli-image {
+		            height: 100%;
+		
+		            img {
+			            height: 100%;
+		            }
+	            }
+            }
+        }
+	}
+
+	/*** Justified gallery start styles ***/
+
+	&.eltdf-pl-justified-gallery {
+
+		opacity: 0;
+		height: auto!important;
+
+		.eltdf-pl-inner {
+			margin: 0 !important;
+			width: 100%;
+			position: relative;
+			overflow: hidden;
+		}
+
+		article {
+			position: absolute;
+			display: inline-block;
+			overflow: hidden;
+			padding: 0 !important;
+			margin: 0 !important;
+			width: auto;
+
+			.eltdf-item-image-holder {
+				height: 100%;
+				overflow: hidden;
+			}
+
+			.eltdf-pli-image {
+				height: 100%;
+				display: block;
+				width: auto;
+				overflow: hidden;
+				img {
+					width: 100%;
+					vertical-align: middle;
+					max-height: 100%;
+				}
+			}
+		}
+
+	}
+	/*** Justified gallery end styles ***/
+
+	/***** Portfolio Types - end *****/
+
+	/***** Additional Features - begin *****/
+
+	&.eltdf-pl-has-animation {
+		article {
+			.eltdf-pl-item-inner {
+				opacity: 0;
+				@include eltdfTransform(translateY(80px));
+				@include eltdfTransition(opacity .8s cubic-bezier(0.34, 0.52, 0.57, 1.04), transform .8s cubic-bezier(0.34, 0.52, 0.57, 1.04));
+			}
+
+			&.eltdf-appeared {
+				.eltdf-pl-item-inner {
+					opacity: 1;
+					@include eltdfTransform(translateY(0));
+				}
+			}
+			
+			.touch & {
+				opacity: 1;
+				@include eltdfTransform(translateY(0));
+			}
+		}
+	}
+
+	/***** Additional Features - end *****/
+}
+
+/* ==========================================================================
+   Portfolio shortcode style - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Portfolio filter style - begin
+   ========================================================================== */
+
+.eltdf-pl-filter-holder {
+    @include eltdfRelativeHolderLayout();
+    margin: 0 0 30px;
+    text-align: center;
+
+    ul {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 0 10px;
+	        padding: 0 22px;
+            cursor: pointer;
+	        
+	        @include laptop-landscape-large {
+		        padding: 0 16px;
+	        }
+	
+	        @include ipad-landscape {
+		        padding: 0 10px;
+	        }
+
+            span {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                color: $default-heading-color;
+                font-size: 12px;
+                line-height: 22px;
+                white-space: nowrap;
+                @include eltdfTransition(color .2s ease-out);
+            }
+
+            &.eltdf-pl-current,
+            &:hover {
+
+                span {
+                    color: $first-main-color;
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Portfolio filter style - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Portfolio standard pagination style - begin
+   ========================================================================== */
+
+.eltdf-portfolio-list-holder {
+	
+	&.eltdf-pl-pag-standard {
+		
+		.eltdf-pl-inner {
+			opacity: 1;
+			@include eltdfTransition(opacity .2s ease-out);
+		}
+		
+		&.eltdf-pl-pag-standard-animate {
+			
+			.eltdf-pl-inner {
+				opacity: 0;
+			}
+		}
+	}
+}
+
+.eltdf-pl-standard-pagination {
+	@include eltdfRelativeHolderLayout();
+	margin: 20px 0 0;
+	clear: both;
+	
+	ul {
+		@include eltdfRelativeHolderLayout();
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		text-align: center;
+		
+		li {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			margin: 0 12px;
+			padding: 0;
+			
+			a {
+				position: relative;
+				display: inline-block;
+				vertical-align: middle;
+				margin: 0;
+				padding: 0;
+			}
+			
+			&.eltdf-pl-pag-active {
+				
+				a {
+					color: $first-main-color;
+				}
+			}
+			
+			&.eltdf-pl-pag-prev,
+			&.eltdf-pl-pag-next {
+				position: absolute;
+				top: 0;
+				
+				a {
+					font-size: 30px;
+					@include eltdfTransition(color .2s ease-out, opacity .2s ease-out);
+					
+					span {
+						display: block;
+						line-height: inherit;
+						
+						&:before {
+							display: block;
+							line-height: inherit;
+						}
+					}
+				}
+			}
+			
+			&.eltdf-pl-pag-prev {
+				left: 0;
+				
+				a {
+					opacity: 0;
+				}
+			}
+			
+			&.eltdf-pl-pag-next {
+				right: 0;
+				
+				a {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio standard pagination style - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Portfolio load more pagination style - begin
+   ========================================================================== */
+
+.eltdf-pl-load-more-holder {
+	@include eltdfRelativeHolderLayout();
+
+    .eltdf-pl-load-more {
+	    margin: 20px 0 40px;
+	    text-align: center;
+    }
+}
+/* ==========================================================================
+   Portfolio load more pagination style - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Portfolio loading element style - begin
+   ========================================================================== */
+
+.eltdf-pl-loading {
+	position: relative;
+	display: none;
+	width: 100%;
+	margin: 43px 0 53px;
+	text-align: center;
+
+	.eltdf-pl-loading-text {
+		font-size: 15px;
+	}
+
+	&.eltdf-filter-trigger {
+		position: absolute;
+		top: 250px;
+		left: 0;
+	}
+	
+    &.eltdf-standard-pag-trigger {
+		position: absolute;
+		top: 50px;
+		left: 0;
+	
+	    .eltdf-pl-has-filter & {
+		    top: 150px;
+	    }
+    }
+
+	&.eltdf-showing {
+		display: block;
+	}
+}
+
+/* ==========================================================================
+   Portfolio loading element style - end
+   ========================================================================== */

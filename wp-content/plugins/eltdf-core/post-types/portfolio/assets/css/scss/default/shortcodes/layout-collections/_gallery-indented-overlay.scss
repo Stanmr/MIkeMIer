@@ -1,0 +1,112 @@
+/* ==========================================================================
+   Portfolio Item Layout - Gallery Overlay style - begin
+   ========================================================================== */
+
+.eltdf-portfolio-list-holder {
+	
+	&.eltdf-pl-gallery-indented-overlay {
+		
+		article {
+			.eltdf-pli-image {
+				&:before {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					margin: -19px 0 0 -19px;
+					content: '\4c';
+					font-family: 'ElegantIcons';
+					speak: none;
+					color: #fff;
+					font-size: 38px;
+					line-height: 1;
+					font-style: normal;
+					font-weight: normal;
+					font-variant: normal;
+					-webkit-font-smoothing: antialiased;
+					z-index: 2;
+					opacity: 0;
+					@include eltdfTransition(opacity .2s ease);
+				}
+			}
+			
+			.eltdf-pli-text {
+				position: absolute;
+				top: 50px;
+				left: 50px;
+				display: block;
+				width: auto;
+				height: auto;
+				text-align: left;
+				
+				.eltdf-pli-title,
+				.eltdf-pli-excerpt,
+				.eltdf-gli-number-of-images-holder{
+					color: #fff;
+				}
+
+				.eltdf-pli-title {
+					text-transform: uppercase;
+				}
+
+				.eltdf-gli-number-of-images-holder {
+					text-align: left;
+					margin-top: 5px;
+					font-size: 12px;
+				}
+				
+				.eltdf-pli-category-holder {
+					a {
+						color: #fff;
+					}
+				}
+			}
+			
+			&:hover {
+				.eltdf-pli-image {
+					&:before {
+						opacity: 1;
+					}
+				}
+
+				.eltdf-pli-text-overlay {
+					width: calc(100% - 26px);
+					height: calc(100% - 26px);
+					top: 13px;
+					left: 13px;
+				}
+				
+				.eltdf-pli-text-holder {
+					opacity: 1;
+				}
+			}
+		}
+		
+		.eltdf-pli-text-holder {
+			position: absolute;
+			display: block;
+			width: 100%;
+			top: 0;
+			left: 0;
+			height: 100%;
+			padding: 13px;
+			opacity: 0;
+			text-align: center;
+			@include eltdfTransition(opacity .2s ease);
+			box-sizing: border-box;
+
+			.eltdf-pli-text-overlay {
+				background-color: rgba($first-main-color, 0.7);
+				content: '';
+				position: absolute;
+				width: 100%;
+				top: 0;
+				left: 0;
+				height: 100%;
+				@include eltdfTransition(all .25s ease);
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio Item Layout - Gallery Overlay style - end
+   ========================================================================== */

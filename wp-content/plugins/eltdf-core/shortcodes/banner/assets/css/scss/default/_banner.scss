@@ -1,0 +1,101 @@
+/* ==========================================================================
+   Banner shortcode style - begin
+   ========================================================================== */
+
+.eltdf-banner-holder {
+    @include eltdfRelativeHolderLayout();
+	
+	.eltdf-banner-image {
+		@include eltdfRelativeHolderLayout();
+		@include eltdfTransition(all .4s cubic-bezier(.49,-.01,0,1));
+		
+		img {
+			display: block;
+			box-shadow: 0 5px 15px 0 rgba(0,0,0,0.1);
+			@include eltdfTransition(all .2s ease-in-out);
+		}
+	}
+
+	&:hover {
+		.eltdf-banner-image {
+			@include eltdfTransform(translateY(-6px));
+		}
+	}
+
+	&.eltdf-banner-info-below-image {
+		.eltdf-banner-text-holder {
+			display: block;
+			margin-top: 30px;
+		}
+
+		.eltdf-banner-text-inner {
+			text-align: center;
+			box-sizing: border-box;
+		}
+
+		.eltdf-banner-subtitle {
+			margin: 0;
+		}
+
+		.eltdf-banner-title {
+			margin: 4px 0 0;
+			text-transform: uppercase;
+		}
+
+		h4.eltdf-banner-title {
+			font-size: 14px;
+		}
+
+		.eltdf-separator {
+			width: 54px;
+			border-bottom-width: 2px;
+			margin-top: 14px;
+		}
+
+		.eltdf-banner-text {
+			margin: 14px 0 0;
+			line-height: 1em;
+		}
+	}
+
+	&.eltdf-banner-info-in-image {
+		.eltdf-banner-text-holder {
+			@include eltdfAbsoluteHolderLayout();
+		}
+
+		.eltdf-banner-text-inner {
+			@include eltdfRelativeHolderLayout();
+			height: 100%;
+			padding: 7% 6% 5% 8%;
+			box-sizing: border-box;
+
+			@include laptop-landscape {
+				padding: 6% 4% 4% 7%;
+			}
+
+			@include ipad-portrait {
+				padding: 25px 30px;
+			}
+		}
+
+		.eltdf-banner-subtitle {
+			margin: 0;
+		}
+
+		.eltdf-banner-title {
+			margin: 4px 0 0;
+		}
+
+		.eltdf-banner-text {
+			margin: 14px 0 0;
+			line-height: 1em;
+		}
+	}
+	.eltdf-banner-link {
+		@include eltdfAbsoluteHolderLayout();
+		z-index: 1;
+	}
+}
+/* ==========================================================================
+   Banner shortcode style - end
+   ========================================================================== */

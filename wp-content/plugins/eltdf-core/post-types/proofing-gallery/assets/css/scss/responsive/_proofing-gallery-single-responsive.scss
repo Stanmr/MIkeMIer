@@ -1,0 +1,73 @@
+/* ==========================================================================
+   Proofing Gallery Single page responsive style - begin
+   ========================================================================== */
+
+.eltdf-proofing-gallery-single-holder {
+	
+    .eltdf-pgs-gallery-holder {
+	    
+
+	    &.eltdf-pgs-gallery-masonry {
+		
+		    @include laptop-landscape {
+			    
+			    $masonry_columns_number: ('four', 'five');
+			
+			    @for $i from 0 to length($masonry_columns_number) {
+				    &.eltdf-pgs-gallery-#{nth($masonry_columns_number,$i+1)}-columns {
+					    $column_width: 100% / 3;
+					
+					    .eltdf-pgs-gallery-image,
+					    .eltdf-pgs-grid-sizer {
+						    width: $column_width;
+					    }
+				    }
+			    }
+		    }
+		
+		    @include ipad-landscape {
+			    
+			    $masonry_columns_number: ('three', 'four', 'five');
+			
+			    @for $i from 0 to length($masonry_columns_number) {
+				    &.eltdf-pgs-gallery-#{nth($masonry_columns_number,$i+1)}-columns {
+					
+					    .eltdf-pgs-gallery-image,
+					    .eltdf-pgs-grid-sizer {
+						    width: 50%;
+					    }
+				    }
+			    }
+		    }
+		    
+		    @include phone-landscape {
+				
+			    $masonry_columns_number: ('two', 'three', 'four');
+			
+			    @for $i from 0 to length($masonry_columns_number) {
+				    &.eltdf-pgs-gallery-#{nth($masonry_columns_number,$i+1)}-columns {
+					
+					    .eltdf-pgs-gallery-image,
+					    .eltdf-pgs-grid-sizer {
+						    width: 100%;
+					    }
+				    }
+			    }
+		    }
+	    }
+    }
+
+}
+@include phone-landscape {
+	.eltdf-pgs-gallery-filter-holder .eltdf-pgs-gallery-download-holder {
+		position: relative;
+		top: 0;
+		left:0;
+		right: auto;
+		margin-top: 20px;
+		@include eltdfTransform(translateY(0));
+	}
+}
+/* ==========================================================================
+   Proofing Gallery Single page responsive style - end
+   ========================================================================== */

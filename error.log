@@ -1,0 +1,107 @@
+[Thu Jan 18 13:44:23.875394 2018] [mpm_event:notice] [pid 32710:tid 140594851239104] AH00489: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Thu Jan 18 13:44:23.875511 2018] [core:notice] [pid 32710:tid 140594851239104] AH00094: Command line: '/usr/sbin/apache2'
+[Thu Jan 18 13:48:38.854128 2018] [mpm_event:notice] [pid 32710:tid 140594851239104] AH00491: caught SIGTERM, shutting down
+[Thu Jan 18 13:48:38.896371 2018] [mpm_event:notice] [pid 443:tid 140712085681344] AH00489: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Thu Jan 18 13:48:38.896444 2018] [core:notice] [pid 443:tid 140712085681344] AH00094: Command line: '/usr/sbin/apache2'
+[Thu Jan 18 14:16:44.073391 2018] [mpm_event:notice] [pid 443:tid 140712085681344] AH00491: caught SIGTERM, shutting down
+[Thu Jan 18 14:19:37.609408 2018] [mpm_event:notice] [pid 1020:tid 140273556128960] AH00489: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Thu Jan 18 14:19:37.609525 2018] [core:notice] [pid 1020:tid 140273556128960] AH00094: Command line: '/usr/sbin/apache2'
+[Thu Jan 18 14:20:41.544232 2018] [mpm_event:notice] [pid 1020:tid 140273556128960] AH00493: SIGUSR1 received.  Doing graceful restart
+[Thu Jan 18 14:20:41.646456 2018] [mpm_event:notice] [pid 1020:tid 140273556128960] AH00489: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Thu Jan 18 14:20:41.646488 2018] [core:notice] [pid 1020:tid 140273556128960] AH00094: Command line: '/usr/sbin/apache2'
+[Thu Jan 18 14:21:25.770136 2018] [mpm_event:notice] [pid 1020:tid 140273556128960] AH00491: caught SIGTERM, shutting down
+[Thu Jan 18 14:21:25.816654 2018] [mpm_event:notice] [pid 1206:tid 140031561880768] AH00489: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Thu Jan 18 14:21:25.816739 2018] [core:notice] [pid 1206:tid 140031561880768] AH00094: Command line: '/usr/sbin/apache2'
+[Thu Jan 18 14:45:51.475112 2018] [mpm_event:notice] [pid 1206:tid 140031561880768] AH00491: caught SIGTERM, shutting down
+[Thu Jan 18 14:45:51.650927 2018] [mpm_prefork:notice] [pid 10556] AH00163: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Thu Jan 18 14:45:51.651021 2018] [core:notice] [pid 10556] AH00094: Command line: '/usr/sbin/apache2'
+[Thu Jan 18 14:45:51.862721 2018] [mpm_prefork:notice] [pid 10556] AH00169: caught SIGTERM, shutting down
+[Thu Jan 18 14:45:51.958244 2018] [mpm_prefork:notice] [pid 10611] AH00163: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Thu Jan 18 14:45:51.958294 2018] [core:notice] [pid 10611] AH00094: Command line: '/usr/sbin/apache2'
+[Thu Jan 18 14:50:37.055908 2018] [mpm_prefork:notice] [pid 10611] AH00169: caught SIGTERM, shutting down
+[Thu Jan 18 14:50:37.141469 2018] [mpm_prefork:notice] [pid 10799] AH00163: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Thu Jan 18 14:50:37.141532 2018] [core:notice] [pid 10799] AH00094: Command line: '/usr/sbin/apache2'
+[Thu Jan 18 16:07:17.134853 2018] [mpm_prefork:notice] [pid 10799] AH00169: caught SIGTERM, shutting down
+[Thu Jan 18 16:07:17.324614 2018] [mpm_prefork:notice] [pid 12065] AH00163: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Thu Jan 18 16:07:17.324675 2018] [core:notice] [pid 12065] AH00094: Command line: '/usr/sbin/apache2'
+[Thu Jan 18 16:38:29.361336 2018] [mpm_prefork:notice] [pid 12065] AH00169: caught SIGTERM, shutting down
+[Thu Jan 18 16:38:29.522485 2018] [mpm_prefork:notice] [pid 12584] AH00163: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Thu Jan 18 16:38:29.522558 2018] [core:notice] [pid 12584] AH00094: Command line: '/usr/sbin/apache2'
+[Thu Jan 18 16:53:46.696556 2018] [mpm_prefork:notice] [pid 12584] AH00169: caught SIGTERM, shutting down
+[Thu Jan 18 16:53:46.855613 2018] [mpm_prefork:notice] [pid 12900] AH00163: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Thu Jan 18 16:53:46.855669 2018] [core:notice] [pid 12900] AH00094: Command line: '/usr/sbin/apache2'
+[Thu Jan 18 16:54:23.348696 2018] [mpm_prefork:notice] [pid 12900] AH00169: caught SIGTERM, shutting down
+[Thu Jan 18 16:54:23.428239 2018] [mpm_prefork:notice] [pid 12959] AH00163: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Thu Jan 18 16:54:23.428303 2018] [core:notice] [pid 12959] AH00094: Command line: '/usr/sbin/apache2'
+[Thu Jan 18 17:01:32.609091 2018] [mpm_prefork:notice] [pid 12959] AH00169: caught SIGTERM, shutting down
+[Thu Jan 18 17:01:32.666131 2018] [mpm_prefork:notice] [pid 13119] AH00163: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Thu Jan 18 17:01:32.666230 2018] [core:notice] [pid 13119] AH00094: Command line: '/usr/sbin/apache2'
+[Thu Jan 18 17:03:30.549779 2018] [mpm_prefork:notice] [pid 13119] AH00169: caught SIGTERM, shutting down
+[Thu Jan 18 17:03:30.647620 2018] [mpm_prefork:notice] [pid 22404] AH00163: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Thu Jan 18 17:03:30.647682 2018] [core:notice] [pid 22404] AH00094: Command line: '/usr/sbin/apache2'
+[Thu Jan 18 17:11:43.155857 2018] [mpm_prefork:notice] [pid 22404] AH00169: caught SIGTERM, shutting down
+[Thu Jan 18 17:11:43.357591 2018] [mpm_prefork:notice] [pid 22638] AH00163: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Thu Jan 18 17:11:43.357640 2018] [core:notice] [pid 22638] AH00094: Command line: '/usr/sbin/apache2'
+[Thu Jan 18 17:16:46.930444 2018] [mpm_prefork:notice] [pid 22638] AH00171: Graceful restart requested, doing restart
+[Thu Jan 18 17:16:47.154853 2018] [mpm_prefork:notice] [pid 22638] AH00163: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Thu Jan 18 17:16:47.154875 2018] [core:notice] [pid 22638] AH00094: Command line: '/usr/sbin/apache2'
+[Thu Jan 18 17:23:59.364427 2018] [mpm_prefork:notice] [pid 22638] AH00169: caught SIGTERM, shutting down
+[Thu Jan 18 17:23:59.470058 2018] [mpm_prefork:notice] [pid 26642] AH00163: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Thu Jan 18 17:23:59.470113 2018] [core:notice] [pid 26642] AH00094: Command line: '/usr/sbin/apache2'
+[Thu Jan 18 17:28:21.728765 2018] [mpm_prefork:notice] [pid 26642] AH00169: caught SIGTERM, shutting down
+[Thu Jan 18 17:28:21.787130 2018] [mpm_prefork:notice] [pid 26785] AH00163: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Thu Jan 18 17:28:21.787208 2018] [core:notice] [pid 26785] AH00094: Command line: '/usr/sbin/apache2'
+[Thu Jan 18 17:29:19.761103 2018] [mpm_prefork:notice] [pid 26785] AH00169: caught SIGTERM, shutting down
+[Thu Jan 18 17:29:19.853175 2018] [mpm_prefork:notice] [pid 637] AH00163: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Thu Jan 18 17:29:19.853226 2018] [core:notice] [pid 637] AH00094: Command line: '/usr/sbin/apache2'
+[Thu Jan 18 17:31:23.483070 2018] [mpm_prefork:notice] [pid 637] AH00169: caught SIGTERM, shutting down
+[Thu Jan 18 17:31:23.560710 2018] [mpm_prefork:notice] [pid 1467] AH00163: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Thu Jan 18 17:31:23.560767 2018] [core:notice] [pid 1467] AH00094: Command line: '/usr/sbin/apache2'
+[Thu Jan 18 17:35:37.242923 2018] [mpm_prefork:notice] [pid 1467] AH00169: caught SIGTERM, shutting down
+[Thu Jan 18 17:35:37.384926 2018] [mpm_prefork:notice] [pid 1568] AH00163: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Thu Jan 18 17:35:37.384985 2018] [core:notice] [pid 1568] AH00094: Command line: '/usr/sbin/apache2'
+[Thu Jan 18 17:51:15.930451 2018] [mpm_prefork:notice] [pid 1568] AH00169: caught SIGTERM, shutting down
+[Thu Jan 18 17:51:16.088493 2018] [mpm_prefork:notice] [pid 1903] AH00163: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Thu Jan 18 17:51:16.088558 2018] [core:notice] [pid 1903] AH00094: Command line: '/usr/sbin/apache2'
+[Thu Jan 18 17:55:22.168316 2018] [mpm_prefork:notice] [pid 1903] AH00169: caught SIGTERM, shutting down
+[Thu Jan 18 17:56:14.952497 2018] [mpm_prefork:notice] [pid 2027] AH00163: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Thu Jan 18 17:56:14.952577 2018] [core:notice] [pid 2027] AH00094: Command line: '/usr/sbin/apache2'
+[Thu Jan 18 17:56:18.648429 2018] [core:notice] [pid 2027] AH00052: child pid 2046 exit signal Segmentation fault (11)
+[Thu Jan 18 17:56:18.648491 2018] [core:notice] [pid 2027] AH00052: child pid 2048 exit signal Segmentation fault (11)
+[Thu Jan 18 17:56:18.648498 2018] [core:notice] [pid 2027] AH00052: child pid 2049 exit signal Segmentation fault (11)
+[Thu Jan 18 17:56:18.648564 2018] [mpm_prefork:notice] [pid 2027] AH00169: caught SIGTERM, shutting down
+[Thu Jan 18 17:56:18.732160 2018] [mpm_prefork:notice] [pid 2060] AH00163: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Thu Jan 18 17:56:18.732228 2018] [core:notice] [pid 2060] AH00094: Command line: '/usr/sbin/apache2'
+[Thu Jan 18 23:14:35.657809 2018] [mpm_prefork:notice] [pid 2060] AH00169: caught SIGTERM, shutting down
+[Thu Jan 18 23:14:35.882307 2018] [mpm_prefork:notice] [pid 5037] AH00163: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Thu Jan 18 23:14:35.882401 2018] [core:notice] [pid 5037] AH00094: Command line: '/usr/sbin/apache2'
+[Thu Jan 18 23:18:32.143719 2018] [mpm_prefork:notice] [pid 5037] AH00169: caught SIGTERM, shutting down
+[Thu Jan 18 23:18:32.233299 2018] [mpm_prefork:notice] [pid 5108] AH00163: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Thu Jan 18 23:18:32.233365 2018] [core:notice] [pid 5108] AH00094: Command line: '/usr/sbin/apache2'
+[Thu Jan 18 23:46:36.087200 2018] [mpm_prefork:notice] [pid 5108] AH00169: caught SIGTERM, shutting down
+[Thu Jan 18 23:46:36.201212 2018] [mpm_prefork:notice] [pid 5358] AH00163: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Thu Jan 18 23:46:36.201263 2018] [core:notice] [pid 5358] AH00094: Command line: '/usr/sbin/apache2'
+[Thu Jan 18 23:48:23.438149 2018] [mpm_prefork:notice] [pid 5358] AH00169: caught SIGTERM, shutting down
+[Thu Jan 18 23:48:23.524495 2018] [mpm_prefork:notice] [pid 5417] AH00163: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Thu Jan 18 23:48:23.524542 2018] [core:notice] [pid 5417] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Jan 19 00:06:24.984771 2018] [mpm_prefork:notice] [pid 5417] AH00169: caught SIGTERM, shutting down
+[Fri Jan 19 00:06:25.150034 2018] [mpm_prefork:notice] [pid 5519] AH00163: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Fri Jan 19 00:06:25.150107 2018] [core:notice] [pid 5519] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Jan 19 00:11:58.948096 2018] [mpm_prefork:notice] [pid 5519] AH00169: caught SIGTERM, shutting down
+[Fri Jan 19 00:11:59.029222 2018] [mpm_prefork:notice] [pid 5709] AH00163: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Fri Jan 19 00:11:59.029285 2018] [core:notice] [pid 5709] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Jan 19 00:15:32.186740 2018] [mpm_prefork:notice] [pid 5709] AH00169: caught SIGTERM, shutting down
+[Fri Jan 19 00:15:32.365069 2018] [mpm_prefork:notice] [pid 5809] AH00163: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Fri Jan 19 00:15:32.365158 2018] [core:notice] [pid 5809] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Jan 19 00:15:42.962716 2018] [mpm_prefork:notice] [pid 5809] AH00171: Graceful restart requested, doing restart
+[Fri Jan 19 00:15:43.339740 2018] [mpm_prefork:notice] [pid 5809] AH00163: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Fri Jan 19 00:15:43.339765 2018] [core:notice] [pid 5809] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Jan 19 00:41:57.279083 2018] [mpm_prefork:notice] [pid 5809] AH00171: Graceful restart requested, doing restart
+[Fri Jan 19 00:41:57.452190 2018] [mpm_prefork:notice] [pid 5809] AH00163: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Fri Jan 19 00:41:57.452208 2018] [core:notice] [pid 5809] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Jan 19 00:42:24.600868 2018] [mpm_prefork:notice] [pid 5809] AH00169: caught SIGTERM, shutting down
+[Fri Jan 19 00:43:57.574067 2018] [mpm_prefork:notice] [pid 6317] AH00163: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Fri Jan 19 00:43:57.574131 2018] [core:notice] [pid 6317] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Jan 19 00:44:25.304422 2018] [mpm_prefork:notice] [pid 6317] AH00171: Graceful restart requested, doing restart
+[Fri Jan 19 00:44:25.567377 2018] [mpm_prefork:notice] [pid 6317] AH00163: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Fri Jan 19 00:44:25.567396 2018] [core:notice] [pid 6317] AH00094: Command line: '/usr/sbin/apache2'

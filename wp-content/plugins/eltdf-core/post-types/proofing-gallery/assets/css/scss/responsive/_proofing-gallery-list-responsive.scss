@@ -1,0 +1,80 @@
+/* ==========================================================================
+   Portfolio shortcode responsive style - begin
+   ========================================================================== */
+
+@include laptop-landscape {
+	
+	.eltdf-proofing-gallery-list-holder {
+		
+		&.eltdf-pgl-gallery {
+			
+			$gallery_columns_number: ('four', 'five');
+			
+			@for $i from 0 to length($gallery_columns_number) {
+				&.eltdf-pgl-#{nth($gallery_columns_number,$i+1)}-columns {
+					$gallery_item_size: 100% / 3;
+					
+					article {
+						width: $gallery_item_size;
+					}
+					
+					@media only screen and (min-width: $ipad-landscape-plus-pixel) {
+						
+						article {
+							
+							&:nth-child(3n+1) {
+								clear: both;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@include ipad-landscape {
+	
+	.eltdf-proofing-gallery-list-holder {
+		
+		&.eltdf-pgl-gallery {
+			
+			$gallery_columns_number: ('three', 'four', 'five');
+			
+			@for $i from 0 to length($gallery_columns_number) {
+				&.eltdf-pgl-#{nth($gallery_columns_number,$i+1)}-columns {
+					
+					article {
+						width: 50%;
+					}
+					
+					@media only screen and (min-width: $phone-landscape-plus-pixel) {
+						
+						article {
+							
+							&:nth-child(2n+1) {
+								clear: both;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@include phone-landscape {
+	
+	.eltdf-proofing-gallery-list-holder {
+		
+		&.eltdf-pgl-gallery {
+			
+			article {
+				width: 100% !important; // !important is set to override all other stronger selectors
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio shortcode responsive style - end
+   ========================================================================== */

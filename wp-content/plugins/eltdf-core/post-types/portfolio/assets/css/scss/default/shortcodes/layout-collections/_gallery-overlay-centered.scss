@@ -1,0 +1,97 @@
+/* ==========================================================================
+   Portfolio Item Layout - Gallery Overlay style - begin
+   ========================================================================== */
+
+.eltdf-portfolio-list-holder {
+	
+	&.eltdf-pl-gallery-overlay-centered {
+		
+		article {
+			
+			.eltdf-pli-text {
+
+				opacity: 0;
+				@include eltdfTransition(opacity .4s .3s);
+				
+				.eltdf-pli-title,
+				.eltdf-pli-excerpt{
+					color: $default-heading-color;
+				}
+
+				.eltdf-pli-title {
+					text-transform: uppercase;
+				}
+
+				.eltdf-separator {
+					width: 31px;
+					border-width: 2px;
+					margin: 13px 0;
+				}
+
+				.eltdf-gli-number-of-images-holder {
+					text-align: center;
+					margin-top: 3px;
+					color: #737373;
+					font-size: 12px;
+					display: inline-block;
+				}
+
+				.eltdf-pli-info-holder {
+					font-size: 12px;
+					font-weight: 500;
+					letter-spacing: .2em;
+					text-transform: uppercase;
+					a {
+						color: #737373;
+					}
+				}
+
+				.eltdf-portfolio-like {
+					display: inline-block;
+					.eltdf-like {
+						&.liked {
+							i{
+								color: $first-main-color;
+							}
+						}
+						&:before {
+							content: "/";
+							display: inline-block;
+							padding: 0 12px 0 8px;
+						}
+					}
+				}
+				
+				.eltdf-pli-category-holder {
+					display: inline-block;
+					
+					a {
+						&:hover {
+							color: $first-main-color;
+						}
+					}
+				}
+			}
+			
+			&:hover {
+				.eltdf-pli-text-holder,
+				.eltdf-pli-text {
+					opacity: 1;
+				}
+			}
+		}
+
+		.eltdf-pli-text-holder {
+			@include eltdfAbsoluteHolderLayout();
+			padding: 20px;
+			background-color: rgba(#fff, 0.9);
+			opacity: 0;
+			text-align: center;
+			box-sizing: border-box;
+			@include eltdfTransition(opacity .4s);
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio Item Layout - Gallery Overlay style - end
+   ========================================================================== */
